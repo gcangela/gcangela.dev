@@ -18,7 +18,12 @@ const IndexPage = () => (
       <Hero />
     </Section>
     <Section>
-      <Col span={12}>pic</Col>
+      <Col span={12}>
+        <form name="dolo" netlify>
+          <input type="text" value="smoel" />
+          <button>awo</button>
+        </form>
+      </Col>
       <Col span={12}>intro</Col>
     </Section>
   </Layout>
