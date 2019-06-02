@@ -1,10 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import styled, { css } from "styled-components"
+import { Layout as SiteLayout } from "antd"
 
 import Header from "./header"
 import "./layout.css"
 import Footer from "./Footer"
+
+const PageLayout = styled(SiteLayout)`
+  background: #fff;
+  height: 4000px;
+`
+const ContentWrapper = styled(SiteLayout.Content)`
+  position: relative;
+  top: 64px;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -18,13 +29,12 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          <main>{children}</main>
-        </div>
-        <Footer />
-      </>
+      <PageLayout>
+        <Header />
+        <ContentWrapper>{children}</ContentWrapper>
+
+        <PageLayout.Footer>footer</PageLayout.Footer>
+      </PageLayout>
     )}
   />
 )
