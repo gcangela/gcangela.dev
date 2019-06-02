@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import { Row, Col, Button, Layout } from "antd"
-import "antd/dist/antd.css"
 import Doge from "../static/images/doge.png"
 
 const HeaderWrapper = styled(Layout.Header)`
