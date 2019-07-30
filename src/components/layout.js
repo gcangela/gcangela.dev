@@ -30,10 +30,14 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <PageLayout>
+        <script
+          src="https://apis.google.com/js/platform.js?onload=renderButton"
+          async
+          defer
+        />
         <Header />
         <ContentWrapper>{children}</ContentWrapper>
-
-        <PageLayout.Footer>footer</PageLayout.Footer>
+        <Footer />
       </PageLayout>
     )}
   />

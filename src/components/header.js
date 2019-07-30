@@ -7,12 +7,15 @@ import Doge from "../static/images/doge.png"
 
 const HeaderWrapper = styled(Layout.Header)`
   color: #141035;
-  background: #d9d6ea;
+  background: #5a66d4;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 32px;
   img {
     margin: 0;
+    position: relative;
+    left: 0;
   }
   position: fixed;
   width: 100%;
@@ -25,7 +28,7 @@ const StyledButton = styled(Button)`
   border-color: inherit;
   font-weight: 700;
   &:hover {
-    background: #5a66d4;
+    // background: #5a66d4;
     color: #fff;
   }
   &:focus {
