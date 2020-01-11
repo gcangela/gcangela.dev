@@ -12,15 +12,7 @@ import { Section } from "../components/Section"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Section type="flex" justify="center" align="middle">
-      <Hero />
-    </Section>
-    <Section heading="About me">
-      <AboutMe />
-    </Section>
-    <Section>
-      <Skills />
-    </Section>
+    <div>Under construction until I design ... hehe </div>
   </Layout>
 )
 
