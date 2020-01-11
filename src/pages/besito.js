@@ -5,7 +5,7 @@ import Paps from "../static/images/paps.png"
 import "../static/css/hehe.css"
 
 const BesitoTimer = () => {
-  const { days, hours, minutes, seconds } = useCountdownTimer("2020-02-11")
+  const { days, hours, minutes, seconds } = useCountdownTimer("2020-02-13")
   return (
     <div className="main-wrapper" style={{ height: "100%" }}>
       <div className="besito-wrapper">
