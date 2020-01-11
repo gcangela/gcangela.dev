@@ -33,9 +33,9 @@ const BesitoTimer = () => {
             {days} {days > 1 ? "days" : "day"}
           </span>
           <span className="time">
-            {hours} {hours > 1 ? "hours" : "hour"}
-            {minutes} {minutes > 1 ? "minutes" : "minute"}
-            {seconds} {seconds > 1 ? "seconds" : "second"}
+            {hours} {hours > 1 ? " hours" : " hour"}
+            {minutes} {minutes > 1 ? " minutes" : " minute"}
+            {seconds} {seconds > 1 ? " seconds" : " second"}
           </span>
           {showBesito && <Besito>😘</Besito>}
         </div>
