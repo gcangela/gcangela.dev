@@ -31,7 +31,9 @@ const BesitoTimer = () => {
         <div className="red-circle">
           <span className="days">{days} days</span>
           <span className="time">
-            {`${hours} hours ${minutes} minutes ${seconds} seconds`}
+            {`${
+              hours > 1 ? `${hours} hours` : `${hours} hour`
+            }  ${minutes} minutes ${seconds} seconds`}
           </span>
           {showBesito && <Besito>😘</Besito>}
         </div>
