@@ -12,7 +12,7 @@ import { Section } from "../components/Section"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <div>Under construction until I design ... hehe </div>
+    <div>Under construction until I learn design ... hehe </div>
   </Layout>
 )
 
