@@ -29,11 +29,13 @@ const BesitoTimer = () => {
           <img className="image dushi" src={BBDushi} />
         </div>
         <div className="red-circle">
-          <span className="days">{days} days</span>
+          <span className="days">
+            {days} {days > 1 ? "days" : "day"}
+          </span>
           <span className="time">
-            {`${
-              hours > 1 ? `${hours} hours` : `${hours} hour`
-            }  ${minutes} minutes ${seconds} seconds`}
+            {hours} {hours > 1 ? "hours" : "hour"}
+            {minutes} {minutes > 1 ? "minutes" : "minute"}
+            {seconds} {seconds > 1 ? "seconds" : "second"}
           </span>
           {showBesito && <Besito>😘</Besito>}
         </div>
