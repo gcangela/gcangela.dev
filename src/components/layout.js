@@ -35,9 +35,9 @@ const Layout = ({ children }) => (
           async
           defer
         />
-        <Header />
+        {/* <Header /> */}
         <ContentWrapper>{children}</ContentWrapper>
-        <Footer />
+        {/* <Footer /> */}
       </PageLayout>
     )}
   />
