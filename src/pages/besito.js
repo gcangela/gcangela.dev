@@ -9,6 +9,9 @@ const Besito = styled.div`
   position: absolute;
   bottom: 32px;
   font-size: 70px;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `
 
 const BesitoTimer = () => {

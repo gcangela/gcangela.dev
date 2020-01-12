@@ -39,7 +39,7 @@ const Board = () => {
   const [winner, setWinner] = useState("")
 
   function calculateWinner(boardHehe) {
-    const winner = winningMoves.reduce((acc, [x, y, z]) => {
+    const winnerHehe = winningMoves.reduce((acc, [x, y, z]) => {
       if (
         boardHehe[x] &&
         boardHehe[x] === boardHehe[y] &&
@@ -51,7 +51,7 @@ const Board = () => {
       return acc
     }, "")
     setWinner(oldwin => {
-      console.log(winner)
+      console.log(winnerHehe)
       return oldwin + winner
     })
     return winner
@@ -61,7 +61,7 @@ const Board = () => {
     if (winner) {
       return
     }
-    setTotalMoves(totalMoves => totalMoves++)
+    // setTotalMoves(totalMoves => totalMoves++)
     if (!board[index]) {
       e.target.innerText = turn
       setTurn(turn => (turn === "X" ? "O" : "X"))
