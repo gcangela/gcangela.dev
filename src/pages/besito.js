@@ -17,11 +17,9 @@ const Besito = styled.div`
 const BesitoTimer = () => {
   const [showBesito, setShowBesito] = useState(false)
 
-  const { days, hours, minutes, seconds } = useCountdownTimer("2020-02-13")
-
   useEffect(() => {
     setShowBesito(showBesito => !showBesito)
-  }, [seconds])
+  }, [])
 
   return (
     <div className="main-wrapper" style={{ height: "100%" }}>
@@ -33,12 +31,12 @@ const BesitoTimer = () => {
         </div>
         <div className="red-circle">
           <span className="days">
-            {days} {days > 1 ? "days" : "day"}
+            6
           </span>
           <span className="time">
-            {hours} {hours > 1 ? " hours" : " hour"} {minutes}{" "}
-            {minutes > 1 ? "minutes" : "minute"} {seconds}{" "}
-            {seconds > 1 ? "seconds" : "second"}
+            6
+            6
+            6
           </span>
           {showBesito && <Besito>😘</Besito>}
         </div>
