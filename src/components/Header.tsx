@@ -2,6 +2,10 @@ import Link from "next/link"
 
 const headerLinks = [
     {
+        href: "/",
+        label: "Home",
+    },
+    {
         href: "/about",
         label: "About",
     },
