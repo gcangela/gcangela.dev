@@ -1,7 +1,5 @@
-import { SVGProps } from "react";
-
-const GitHubIcon = (props: SVGProps<SVGElement>) => (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 98" width="32" height="32">
+const GitHubIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 98" width="32" height="32">
     <path
       fill="currentColor"
       fillRule="evenodd"
