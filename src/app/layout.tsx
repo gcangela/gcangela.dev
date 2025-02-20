@@ -4,15 +4,10 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-
-
-
-
 const firaCode = Fira_Code({
   variable: "--font-fira-code",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: "GCANGELA.DEV",
@@ -28,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${firaCode.variable} antialiased px-6 flex flex-col gap-8 h-screen`}
+        className={`${firaCode.variable} antialiased px-0 sm:px-6 flex flex-col h-screen`}
       >
         <Header />
-        <main className="font-[family-name:var(--font-geist-sans)] mt-[44px] overflow-auto h-screen">
+        <main className="mx-auto max-h-[calc(100vh-var(--header-height)-var(--footer-height))] min-h-[calc(100vh-var(--header-height)-var(--footer-height))] font-[family-name:var(--font-geist-sans)] mt-[var(--header-height)] overflow-auto">
           {children}
         </main>
         <Footer />
