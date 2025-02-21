@@ -11,7 +11,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --header-height: 44px;
+    --header-height: 48px;
     --footer-height: 116px;
   }
 }
@@ -28,25 +28,20 @@ body {
   }
 }
 
-/* In your global CSS file */
+
 ::-webkit-scrollbar {
-  width: 8px;
-  /* Scrollbar width */
+  width: 2px;
 }
 
 ::-webkit-scrollbar-track {
   background: #f0f0f0;
-  /* Scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
   background: #555;
-  /* Scrollbar thumb */
   border-radius: 6px;
-  /* Border radius */
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #888;
-  /* Hover effect */
 }

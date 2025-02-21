@@ -23,8 +23,8 @@ export function Tabs<T extends string>({ children, defaultValue, onChange }: Tab
     const activeTabElement = children.find((child) => child.props.value === activeTab)?.props.children;
 
     return (
-        <div>
-            <div className="flex w-fit border-b border-gray-300">
+        <div className="flex flex-col size-full gap-8">
+            <div className="flex w-full justify-around border-b border-gray-300">
                 {children.map((tab) => {
                     return <button
                         key={`about-page-tab: ${tab.props.value}`}
@@ -34,7 +34,7 @@ export function Tabs<T extends string>({ children, defaultValue, onChange }: Tab
                                 onChange(tab.props.value);
                             }
                         }}
-                        className={`px-4 py-2 text-sm font-medium ${activeTab === tab.props.value ? "border-b-2 border-white text-white" : "text-gray-500"
+                        className={`py-2 text-sm font-medium ${activeTab === tab.props.value ? "border-b-2 border-white text-white" : "text-gray-500"
                             }`}
                     >
                         {tab.props.title}
@@ -43,8 +43,7 @@ export function Tabs<T extends string>({ children, defaultValue, onChange }: Tab
 
                 )}
             </div>
-
-            <div className="mt-4">{activeTabElement}</div>
+            <div className="size-full max-h-[inherit] overflow-auto">{activeTabElement}</div>
         </div>
     );
 }

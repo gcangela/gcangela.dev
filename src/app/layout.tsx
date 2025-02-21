@@ -21,15 +21,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full overflow-hidden">
       <body
-        className={`${firaCode.variable} antialiased px-0 sm:px-6 flex flex-col h-screen`}
+        className={`${firaCode.variable} antialiased px-0 sm:px-6 h-full`}
       >
-        <Header />
-        <main className="mx-auto max-h-[calc(100vh-var(--header-height)-var(--footer-height))] min-h-[calc(100vh-var(--header-height)-var(--footer-height))] font-[family-name:var(--font-geist-sans)] mt-[var(--header-height)] overflow-auto">
-          {children}
-        </main>
-        <Footer />
+        <div className="grid grid-rows-[var(--header-height)_auto_var(--footer-height)] h-full">
+          <Header />
+          <main className="h-full">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

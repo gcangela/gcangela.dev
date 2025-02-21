@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-mobile-image': "url('/images/giancarlo.png')",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
