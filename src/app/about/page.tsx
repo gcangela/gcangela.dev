@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation"
 type PageTabs = "about" | "experience" | "education" | "skills"
 
 export default function About() {
-    const location = window.location.search
+    const location = window?.location.search
     const searchParams = new URLSearchParams(location)
 
     const router = useRouter();
