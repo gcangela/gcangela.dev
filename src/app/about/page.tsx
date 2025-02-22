@@ -2,12 +2,14 @@
 import { ContentBlock } from "@/components/ContentBlock"
 import { useTabs } from "@/components/Tabs"
 import Image from "next/image"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useRouter } from "next/navigation"
 
 type PageTabs = "about" | "experience" | "education" | "skills"
 
 export default function About() {
-    const searchParams = useSearchParams()
+    const location = window.location.search
+    const searchParams = new URLSearchParams(location)
+
     const router = useRouter();
     const tabFromUrl = searchParams.get("tab") as PageTabs | null
 
