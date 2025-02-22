@@ -1,14 +1,17 @@
 "use client";
 
-import { createContext, useEffect, useState, useContext } from "react";
+import { createContext, useEffect, useState, useContext, Dispatch, SetStateAction } from "react";
 
-const ThemeContext = createContext(null);
+type ThemeModes = "system" | 'light' | 'dark'
 
-export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState("system"); // Default to system
+type ThemeContextType = { theme: ThemeModes, setTheme: Dispatch<SetStateAction<ThemeModes>> } | null
 
+const ThemeContext = createContext<ThemeContextType>({ setTheme: () => { }, theme: 'dark' });
+
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+    const [theme, setTheme] = useState<ThemeModes>("system"); // Default to system
     useEffect(() => {
-        const storedTheme = localStorage.getItem("theme");
+        const storedTheme = localStorage.getItem("theme") as ThemeModes;
         if (storedTheme) {
             setTheme(storedTheme);
         } else {
@@ -35,4 +38,13 @@ export const ThemeProvider = ({ children }) => {
     );
 };
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => {
+
+    const context = useContext(ThemeContext)
+
+    if (!context) {
+        throw new Error('This hook needs to be nested inside the ThemeProvider')
+    }
+
+    return context
+};
