@@ -2,14 +2,23 @@
 import { ContentBlock } from "@/components/ContentBlock"
 import { useTabs } from "@/components/Tabs"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
+import { Suspense } from "react"
 
 type PageTabs = "about" | "experience" | "education" | "skills"
 
-export default function About() {
-    const location = window?.location.search
-    const searchParams = new URLSearchParams(location)
 
+export default function About() {
+    return (
+        <Suspense>
+            <AboutPage />
+        </Suspense>
+    )
+}
+
+
+function AboutPage() {
+    const searchParams = useSearchParams()
     const router = useRouter();
     const tabFromUrl = searchParams.get("tab") as PageTabs | null
 
