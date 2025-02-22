@@ -15,7 +15,7 @@ export default function Home() {
                     <Link className="font-normal" href="/about">
                         <button className="border border-white rounded-xl p-4 self-center py-2 px-6 hover:bg-white hover:text-black">Meet me</button>
                     </Link>
-                    <Link href='/docs/Giancarlo_Angela_CV2.pdf' download>
+                    <Link href='/docs/Giancarlo_Angela_CV2.pdf' download target="_blank">
                         <button className="border border-white rounded-xl p-4 self-center py-2 px-6 hover:bg-white hover:text-black">Download CV</button>
                     </Link>
                 </div>

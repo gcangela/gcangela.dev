@@ -25,9 +25,9 @@ export default function RootLayout({
       <body
         className={`${firaCode.variable} antialiased px-0 sm:px-6 h-full`}
       >
-        <div className="grid grid-rows-[var(--header-height)_auto_var(--footer-height)] h-full">
+        <div className="grid grid-rows-[var(--header-height)_1fr_var(--footer-height)] h-full">
           <Header />
-          <main className="h-full">
+          <main className="h-[calc(100vh-var(--header-height)-var(--footer-height))]">
             {children}
           </main>
           <Footer />
