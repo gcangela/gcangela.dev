@@ -34,7 +34,7 @@ export function Tabs<T extends string>({ children, defaultValue, onChange }: Tab
                                 onChange(tab.props.value);
                             }
                         }}
-                        className={`py-2 text-sm font-medium ${activeTab === tab.props.value ? "border-b-2 border-white text-white" : "text-gray-500"
+                        className={`py-2 text-sm font-medium ${activeTab === tab.props.value ? "border-b-2 border-black dark:border-white text-black dark:text-white" : "text-gray-500"
                             }`}
                     >
                         {tab.props.title}

@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --header-height: 48px;
+  --footer-height: 116px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,17 +18,39 @@
   }
 }
 
+
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Fira Code, monospace;
 }
 
-@layer base {
-  a {
-    @apply text-white hover:font-bold;
-  }
+button {
+  border-color: var(--foreground);
+  color: var(--foreground)
 }
+
+html dark {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+
+header,
+footer,
+a {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+a button:hover {
+  font-weight: bold;
+}
+
+
+
+
 
 
 ::-webkit-scrollbar {

@@ -3,6 +3,7 @@ import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const firaCode = Fira_Code({
   variable: "--font-fira-code",
@@ -25,13 +26,16 @@ export default function RootLayout({
       <body
         className={`${firaCode.variable} antialiased px-0 sm:px-6 h-full`}
       >
-        <div className="grid grid-rows-[var(--header-height)_1fr_var(--footer-height)] h-full">
-          <Header />
-          <main className="h-[calc(100vh-var(--header-height)-var(--footer-height))]">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <ThemeProvider>
+          <div className="grid grid-rows-[var(--header-height)_1fr_var(--footer-height)] h-full">
+            <Header />
+            <main className="h-[calc(100vh-var(--header-height)-var(--footer-height))]">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </ThemeProvider>
+
       </body>
     </html>
   );

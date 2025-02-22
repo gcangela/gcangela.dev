@@ -13,10 +13,10 @@ export default function Home() {
                 </p>
                 <div className="flex gap-4 justify-center flex-wrap">
                     <Link className="font-normal" href="/about">
-                        <button className="border border-white rounded-xl p-4 self-center py-2 px-6 hover:bg-white hover:text-black">Meet me</button>
+                        <button className="border rounded-xl p-4 self-center py-2 px-6 hover:bg-white hover:text-black">Meet me</button>
                     </Link>
                     <Link href='/docs/Giancarlo_Angela_CV2.pdf' download target="_blank">
-                        <button className="border border-white rounded-xl p-4 self-center py-2 px-6 hover:bg-white hover:text-black">Download CV</button>
+                        <button className="border rounded-xl p-4 self-center py-2 px-6 hover:bg-white hover:text-black">Download CV</button>
                     </Link>
                 </div>
             </div>

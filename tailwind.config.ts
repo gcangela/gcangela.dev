@@ -18,5 +18,5 @@ export default {
     },
   },
   plugins: [],
-  darkMode: 'selector',
+  darkMode: 'media',
 } satisfies Config;
