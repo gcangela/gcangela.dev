@@ -34,7 +34,7 @@ function AboutPage() {
     return <div className="grid grid-cols-1 gap-8 p-4 md:grid-cols-2 max-w-7xl mx-auto max-h-full sm:max-h-[600px]">
         <div className="size-full max-h-[inherit] flex items-center justify-center">
             <div className="bg-custom-mobile-image h-40 w-40 rounded-full bg-cover md:hidden bg-top" />
-            <Image loading="lazy" priority src="/images/giancarlo.png" alt="Giancarlo Angela" width={400} height={300} className="hidden md:block md:w-[400px] sm:w-[300px] w-[280px] mx-auto rounded-md" />
+            <Image placeholder="blur" loading="lazy" priority src="/images/giancarlo.png" alt="Giancarlo Angela" width={400} height={300} className="hidden md:block md:w-[400px] sm:w-[300px] w-[280px] mx-auto rounded-md" />
         </div>
         <div className="size-full max-h-[inherit]  mb-[var(--footer-height)]">
             <Tabs defaultValue={tabFromUrl || 'about'} onChange={handleNavigate}>
