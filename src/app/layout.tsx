@@ -22,14 +22,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full overflow-hidden">
+    <html lang="en">
       <body
-        className={`${firaCode.variable} antialiased px-0 sm:px-6 h-full`}
+        className={`${firaCode.variable} antialiased px-0 sm:px-6`}
       >
         <ThemeProvider>
-          <div className="grid grid-rows-[var(--header-height)_1fr_var(--footer-height)] h-full">
+          <div className="h-screen flex flex-col relative top-0">
             <Header />
-            <main className="h-[calc(100vh-var(--header-height)-var(--footer-height))]">
+            <main className="flex flex-1 flex-shrink-1 overflow-auto my-10">
               {children}
             </main>
             <Footer />

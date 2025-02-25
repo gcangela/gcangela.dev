@@ -1,5 +1,5 @@
 const GitHubIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 98" width="32" height="32" className="dark:text-white">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 98" width="32" height="32" className="h-[24px] w-[24px] dark:text-white">
     <path
       fill="currentColor"
       fillRule="evenodd"

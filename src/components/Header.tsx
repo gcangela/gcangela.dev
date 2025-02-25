@@ -36,8 +36,8 @@ export default function ThemeToggle() {
 }
 
 export const Header = () => {
-    return <header className="sticky top-0 left-0 right-0 z-50 h-[var(--header-height)] px-6">
-        <div className=" size-full flex gap-4 items-center justify-start sm:justify-between">
+    return <header className="px-2 sm:px-6">
+        <div className="w-full flex gap-4 items-center justify-start sm:justify-between h-[var(--header-height)]">
             <Link href="/" className="!no-underline">
                 <div className="flex gap-2 items-center justify-center text-2xl font-bold font-mono">
                     <span>GC</span>

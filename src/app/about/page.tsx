@@ -31,12 +31,11 @@ function AboutPage() {
     }
 
 
-    return <div className="grid grid-rows-[max-content_minmax(0,1fr)] gap-8 p-4 md:grid-cols-2 max-w-7xl mx-auto max-h-full sm:max-h-[600px] h-full">
-        <div className="size-full max-h-[inherit] flex items-center justify-center flex-1">
-            <div className="bg-custom-mobile-image h-40 w-40 rounded-full bg-cover md:hidden bg-top" />
+    return <div className="flex flex-col md:flex-row relative top-0 h-full">
+        <div className="flex-1 items-center justify-center flex-wrap hidden md:flex ">
             <Image priority src="/images/giancarlo.png" alt="Giancarlo Angela" width={400} height={300} className="hidden md:block md:w-[400px] sm:w-[300px] w-[280px] mx-auto rounded-md opacity-0 transition-opacity duration-[2s]" onLoadingComplete={img => img.classList.remove('opacity-0')} />
         </div>
-        <div className="size-full sm:max-h-[inherit]">
+        <div className="flex flex-1">
             <Tabs defaultValue={tabFromUrl || 'about'} onChange={handleNavigate}>
                 <Tab title="About Me" value="about">
                     <ContentBlock title="From Finance to Tech">
@@ -98,27 +97,25 @@ function AboutPage() {
                     </ContentBlock>
                 </Tab>
                 <Tab title="Education" value="education">
-                    <section>
-                        <ContentBlock title="Self-taught Web Developer">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies nibh euismod, pulvinar ex nec, volutpat sem. Vivamus suscipit faucibus augue, convallis pretium tellus pulvinar non. Praesent eget convallis sapien. Fusce fringilla libero turpis, in dignissim tellus sollicitudin eget. Nam quis tellus sit amet lacus dictum aliquam nec non est. Suspendisse mattis a tellus sit amet volutpat. Phasellus eget sapien in turpis bibendum aliquam. Maecenas convallis nec erat nec tincidunt. Ut sagittis eleifend massa ut volutpat. Nam molestie eu orci id interdum. Suspendisse augue ante, laoreet ac rhoncus vitae, feugiat faucibus leo. Phasellus tincidunt, arcu ut ultricies porta, nisi orci feugiat orci, quis mattis nisi diam ut nunc.
-                            </p>
-                        </ContentBlock>
-                    </section>
-                    <section>
-                        <ContentBlock title="Avans University of Applied Sciences - 2011-2017">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies nibh euismod, pulvinar ex nec, volutpat sem. Vivamus suscipit faucibus augue, convallis pretium tellus pulvinar non. Praesent eget convallis sapien. Fusce fringilla libero turpis, in dignissim tellus sollicitudin eget. Nam quis tellus sit amet lacus dictum aliquam nec non est. Suspendisse mattis a tellus sit amet volutpat. Phasellus eget sapien in turpis bibendum aliquam. Maecenas convallis nec erat nec tincidunt. Ut sagittis eleifend massa ut volutpat. Nam molestie eu orci id interdum. Suspendisse augue ante, laoreet ac rhoncus vitae, feugiat faucibus leo. Phasellus tincidunt, arcu ut ultricies porta, nisi orci feugiat orci, quis mattis nisi diam ut nunc.
-                            </p>
-                        </ContentBlock>
-                    </section>
-                    <section>
-                        <ContentBlock title="Colegio Arubano - 2003-2010">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies nibh euismod, pulvinar ex nec, volutpat sem. Vivamus suscipit faucibus augue, convallis pretium tellus pulvinar non. Praesent eget convallis sapien. Fusce fringilla libero turpis, in dignissim tellus sollicitudin eget. Nam quis tellus sit amet lacus dictum aliquam nec non est. Suspendisse mattis a tellus sit amet volutpat. Phasellus eget sapien in turpis bibendum aliquam. Maecenas convallis nec erat nec tincidunt. Ut sagittis eleifend massa ut volutpat. Nam molestie eu orci id interdum. Suspendisse augue ante, laoreet ac rhoncus vitae, feugiat faucibus leo. Phasellus tincidunt, arcu ut ultricies porta, nisi orci feugiat orci, quis mattis nisi diam ut nunc.
-                            </p>
-                        </ContentBlock>
-                    </section>
+
+                    <ContentBlock title="Self-taught Web Developer">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies nibh euismod, pulvinar ex nec, volutpat sem. Vivamus suscipit faucibus augue, convallis pretium tellus pulvinar non. Praesent eget convallis sapien. Fusce fringilla libero turpis, in dignissim tellus sollicitudin eget. Nam quis tellus sit amet lacus dictum aliquam nec non est. Suspendisse mattis a tellus sit amet volutpat. Phasellus eget sapien in turpis bibendum aliquam. Maecenas convallis nec erat nec tincidunt. Ut sagittis eleifend massa ut volutpat. Nam molestie eu orci id interdum. Suspendisse augue ante, laoreet ac rhoncus vitae, feugiat faucibus leo. Phasellus tincidunt, arcu ut ultricies porta, nisi orci feugiat orci, quis mattis nisi diam ut nunc.
+                        </p>
+                    </ContentBlock>
+
+                    <ContentBlock title="Avans University of Applied Sciences - 2011-2017">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies nibh euismod, pulvinar ex nec, volutpat sem. Vivamus suscipit faucibus augue, convallis pretium tellus pulvinar non. Praesent eget convallis sapien. Fusce fringilla libero turpis, in dignissim tellus sollicitudin eget. Nam quis tellus sit amet lacus dictum aliquam nec non est. Suspendisse mattis a tellus sit amet volutpat. Phasellus eget sapien in turpis bibendum aliquam. Maecenas convallis nec erat nec tincidunt. Ut sagittis eleifend massa ut volutpat. Nam molestie eu orci id interdum. Suspendisse augue ante, laoreet ac rhoncus vitae, feugiat faucibus leo. Phasellus tincidunt, arcu ut ultricies porta, nisi orci feugiat orci, quis mattis nisi diam ut nunc.
+                        </p>
+                    </ContentBlock>
+
+                    <ContentBlock title="Colegio Arubano - 2003-2010">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies nibh euismod, pulvinar ex nec, volutpat sem. Vivamus suscipit faucibus augue, convallis pretium tellus pulvinar non. Praesent eget convallis sapien. Fusce fringilla libero turpis, in dignissim tellus sollicitudin eget. Nam quis tellus sit amet lacus dictum aliquam nec non est. Suspendisse mattis a tellus sit amet volutpat. Phasellus eget sapien in turpis bibendum aliquam. Maecenas convallis nec erat nec tincidunt. Ut sagittis eleifend massa ut volutpat. Nam molestie eu orci id interdum. Suspendisse augue ante, laoreet ac rhoncus vitae, feugiat faucibus leo. Phasellus tincidunt, arcu ut ultricies porta, nisi orci feugiat orci, quis mattis nisi diam ut nunc.
+                        </p>
+                    </ContentBlock>
+
                 </Tab>
                 <Tab title="Skills" value="skills">
                     <ContentBlock title="Frontend">
@@ -146,7 +143,13 @@ function AboutPage() {
                 </Tab>
             </Tabs >
         </div >
+
     </div >
+
+
+
+
+
 
 
 
