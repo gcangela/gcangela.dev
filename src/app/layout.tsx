@@ -23,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="min-h-[-webkit-fill-available]">
+    <html lang="en">
       <body
-        className={`${firaCode.variable} antialiased px-0 sm:px-6 h-[-webkit-fill-available]`}
+        className={`${firaCode.variable} antialiased px-0 sm:px-6`}
       >
         <ThemeProvider>
           <div className="h-screen flex flex-col relative top-0">
