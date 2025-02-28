@@ -13,6 +13,7 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: "GCANGELA.DEV",
   description: "Giancarlo Angela's personal website",
+  appleWebApp: true,
 
 };
 
