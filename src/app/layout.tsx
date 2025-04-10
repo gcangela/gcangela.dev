@@ -9,6 +9,7 @@ const firaCode = Fira_Code({
   variable: "--font-fira-code",
   subsets: ["latin"],
   display: "swap",
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
