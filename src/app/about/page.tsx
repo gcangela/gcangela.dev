@@ -21,6 +21,8 @@ function getCurrentTab(searchParams: SearchParams): PageTabs {
     : "about";
 }
 
+export const dynamic = "force-dynamic";
+
 export default function AboutPage({ searchParams }: Props) {
   const params = use(searchParams);
   const currentTab = getCurrentTab(params);
