@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const firaCode = Fira_Code({
   variable: "--font-fira-code",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${firaCode.variable} antialiased px-0 sm:px-6`}
-      >
+      <body className={`${firaCode.variable} antialiased px-0 sm:px-6`}>
         <ThemeProvider>
           <div className="h-screen flex flex-col relative top-0">
             <Header />
@@ -35,7 +34,6 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
-
       </body>
     </html>
   );
