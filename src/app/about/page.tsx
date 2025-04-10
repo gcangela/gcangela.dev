@@ -1,5 +1,6 @@
 import { Tab, Tabs } from "@/components/Tabs";
 import { tabContent } from "./content";
+import { use } from "react";
 
 const aboutPageTabs = ["about", "experience", "education", "skills"] as const;
 export type PageTabs = (typeof aboutPageTabs)[number];
@@ -7,7 +8,6 @@ export type PageTabs = (typeof aboutPageTabs)[number];
 type SearchParams = { tab?: string | string[] | undefined };
 
 type Props = {
-  params: Promise<{ slug: string }>;
   searchParams: Promise<SearchParams>;
 };
 
@@ -21,8 +21,8 @@ function getCurrentTab(searchParams: SearchParams): PageTabs {
     : "about";
 }
 
-export default async function AboutPage({ searchParams }: Props) {
-  const params = await searchParams;
+export default function AboutPage({ searchParams }: Props) {
+  const params = use(searchParams);
   const currentTab = getCurrentTab(params);
 
   return (
