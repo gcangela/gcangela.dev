@@ -16,7 +16,6 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
             setTheme(storedTheme);
         } else {
             // Check system preference if no localStorage value
-
             const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
             setTheme(systemPrefersDark ? "dark" : "light");
         }

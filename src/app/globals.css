@@ -9,15 +9,6 @@
   --footer-height: 116px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --header-height: 48px;
-    --footer-height: 116px;
-  }
-}
-
 
 
 body {

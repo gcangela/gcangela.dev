@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   title: "GCANGELA.DEV",
   description: "Giancarlo Angela's personal website",
   appleWebApp: true,
-
 };
 
 export default function RootLayout({
@@ -30,7 +29,7 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="h-screen flex flex-col relative top-0">
             <Header />
-            <main className="flex flex-1 flex-shrink-1 overflow-auto my-10">
+            <main className="flex flex-1 overflow-auto my-10 max-w-6xl mx-auto">
               {children}
             </main>
             <Footer />
