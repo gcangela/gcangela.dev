@@ -1,0 +1,118 @@
+.custom-consultancy {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: #0f172a;
+  background: #ffffff;
+  /* Sticky header is two rows (logo + nav); offset hash scroll targets */
+  --cc-scroll-offset: 10rem;
+}
+
+html:has(.custom-consultancy) {
+  scroll-padding-top: var(--cc-scroll-offset);
+}
+
+.custom-consultancy section[id] {
+  scroll-margin-top: var(--cc-scroll-offset);
+}
+
+.custom-consultancy button {
+  border-color: transparent;
+  color: inherit;
+}
+
+.custom-consultancy header,
+.custom-consultancy footer,
+.custom-consultancy a {
+  color: inherit;
+  background: transparent;
+}
+
+.custom-consultancy a:hover {
+  font-weight: inherit;
+}
+
+.custom-consultancy .cc-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 2.25rem;
+  padding: 0 1rem;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.custom-consultancy .cc-btn-primary:hover {
+  background-color: #1e293b;
+}
+
+.custom-consultancy .cc-btn-primary-lg {
+  height: 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.custom-consultancy .cc-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 2.25rem;
+  padding: 0 1rem;
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.custom-consultancy .cc-btn-outline:hover {
+  background-color: #f8fafc;
+}
+
+.custom-consultancy .cc-btn-outline-lg {
+  height: 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.custom-consultancy .cc-input,
+.custom-consultancy .cc-textarea {
+  display: flex;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #0f172a;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.custom-consultancy .cc-input {
+  height: 2.25rem;
+}
+
+.custom-consultancy .cc-textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+.custom-consultancy details summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.custom-consultancy details summary::-webkit-details-marker {
+  display: none;
+}
+
+.custom-consultancy details[open] summary .cc-chevron {
+  transform: rotate(180deg);
+}
