@@ -1,5 +1,5 @@
 import { ContentBlock } from "@/components/ContentBlock";
-import { PageTabs } from "./page";
+import { PageTabs } from "./tabs";
 import { ReactNode } from "react";
 
 export const tabContent: Record<PageTabs, { title: string, content: ReactNode }> = {
